@@ -12,6 +12,7 @@
 		EB5778021952517500CDDCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5778001952517500CDDCE2 /* Main.storyboard */; };
 		EB5778041952517500CDDCE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5778031952517500CDDCE2 /* Images.xcassets */; };
 		EB5778101952517500CDDCE2 /* PostRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57780F1952517500CDDCE2 /* PostRequesterTests.swift */; };
+		EB57781A195251DF00CDDCE2 /* api.rb in Resources */ = {isa = PBXBuildFile; fileRef = EB577819195251DF00CDDCE2 /* api.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 		EB5778091952517500CDDCE2 /* PostRequesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostRequesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB57780E1952517500CDDCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB57780F1952517500CDDCE2 /* PostRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequesterTests.swift; sourceTree = "<group>"; };
+		EB577819195251DF00CDDCE2 /* api.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = api.rb; sourceTree = "<group>"; };
+		EBF1DB1519551DB70074A420 /* RunAPI.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RunAPI.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				EB5777FB1952517500CDDCE2 /* Info.plist */,
+				EBF1DB1519551DB70074A420 /* RunAPI.sh */,
+				EB577819195251DF00CDDCE2 /* api.rb */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB57781A195251DF00CDDCE2 /* api.rb in Resources */,
 				EB5778021952517500CDDCE2 /* Main.storyboard in Resources */,
 				EB5778041952517500CDDCE2 /* Images.xcassets in Resources */,
 			);
@@ -399,6 +405,7 @@
 				EB5778151952517500CDDCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB5778161952517500CDDCE2 /* Build configuration list for PBXNativeTarget "PostRequesterTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +414,7 @@
 				EB5778181952517500CDDCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
