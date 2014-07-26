@@ -7,23 +7,26 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class PostViewController: UIViewController {
                             
-    @IBOutlet var statusLabel : UILabel
+    @IBOutlet var statusLabel : UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         // Register for status notification
-        let myAppName = NSBundle.mainBundle().infoDictionary.objectForKey(kCFBundleNameKey) as String
+        // let myAppName = NSBundle.mainBundle().infoDictionary.objectForKey(kCFBundleNameKey) as String
+        let myAppName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as String
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusHandler:", name: String("\(myAppName)_active"), object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "statusHandler:", name: String("\(myAppName)_inactive"), object: nil)
     }
     
     func statusHandler(notification: NSNotification) {
-        self.statusLabel.text = "\(notification.name)..."
+        statusLabel!.text = "\(notification.name)..."
     }
 }
 

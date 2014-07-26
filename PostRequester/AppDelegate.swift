@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var myTimer: NSTimer?
     var activeNotification: NSNotification?
     var inactiveNotification: NSNotification?
+    let timeInterval = 3 as NSTimeInterval
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
@@ -28,8 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let myAppName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName")? as NSString
 
-        let myAppName = NSBundle.mainBundle().infoDictionary.objectForKey(kCFBundleNameKey) as String
+        // let myAppName = NSBundle.mainBundle().infoDictionary.objectForKey(kCFBundleNameKey) as String
+        // let myAppName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as String
         self.activeNotification = NSNotification(name: String("\(myAppName)_active"), object: nil)
         self.inactiveNotification = NSNotification(name: String("\(myAppName)_inactive"), object: nil)
         
@@ -56,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "timerTicked", userInfo: nil, repeats: true)
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: "timerTicked", userInfo: nil, repeats: true)
         NSNotificationCenter.defaultCenter().postNotification(self.activeNotification)
 
     }

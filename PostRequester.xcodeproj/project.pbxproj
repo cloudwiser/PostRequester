@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB5777FD1952517500CDDCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5777FC1952517500CDDCE2 /* AppDelegate.swift */; };
-		EB5777FF1952517500CDDCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5777FE1952517500CDDCE2 /* ViewController.swift */; };
+		EB5777FF1952517500CDDCE2 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5777FE1952517500CDDCE2 /* PostViewController.swift */; };
 		EB5778021952517500CDDCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5778001952517500CDDCE2 /* Main.storyboard */; };
 		EB5778041952517500CDDCE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5778031952517500CDDCE2 /* Images.xcassets */; };
 		EB5778101952517500CDDCE2 /* PostRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57780F1952517500CDDCE2 /* PostRequesterTests.swift */; };
@@ -29,7 +29,7 @@
 		EB5777F71952517500CDDCE2 /* PostRequester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostRequester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5777FB1952517500CDDCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB5777FC1952517500CDDCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB5777FE1952517500CDDCE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB5777FE1952517500CDDCE2 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		EB5778011952517500CDDCE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB5778031952517500CDDCE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB5778091952517500CDDCE2 /* PostRequesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostRequesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				EB5777FC1952517500CDDCE2 /* AppDelegate.swift */,
-				EB5777FE1952517500CDDCE2 /* ViewController.swift */,
+				EB5777FE1952517500CDDCE2 /* PostViewController.swift */,
 				EB5778001952517500CDDCE2 /* Main.storyboard */,
 				EB5778031952517500CDDCE2 /* Images.xcassets */,
 				EB5777FA1952517500CDDCE2 /* Supporting Files */,
@@ -163,6 +163,7 @@
 				TargetAttributes = {
 					EB5777F61952517500CDDCE2 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = JYXQPVB8H5;
 					};
 					EB5778081952517500CDDCE2 = {
 						CreatedOnToolsVersion = 6.0;
@@ -214,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5777FF1952517500CDDCE2 /* ViewController.swift in Sources */,
+				EB5777FF1952517500CDDCE2 /* PostViewController.swift in Sources */,
 				EB5777FD1952517500CDDCE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PostRequester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,6 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PostRequester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
